@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="player-content" id="player-content">
+      <div class="player-list" id="player-list"></div>
+      <div class="controls">
+        <label for="firstRoundCompetitors" class="label-style">Number of Matches</label>
+        <select id="firstRoundCompetitors" onchange="setFirstRoundCompetitors()">
+          <option value="2">2</option>
+          <option value="4">4</option>
+          <option value="8">8</option>
+          <option value="16" selected>16</option>
+          <option value="32">32</option>
+          <option value="64">64</option>
+        </select>
+        <button onclick="setPlayers()">Set Number of Players</button>
+        <input type="number" id="numPlayers" min="1" max="1000" value="16">
+        <button onclick="importPlayers()">Import Players</button>
+      </div>
+    </div>
+    <div class="main-content">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
